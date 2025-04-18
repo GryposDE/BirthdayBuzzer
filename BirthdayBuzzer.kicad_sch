@@ -2141,6 +2141,12 @@
 			)
 		)
 	)
+	(junction
+		(at 57.15 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e65326fb-c4c4-449f-8d03-b5591689b969")
+	)
 	(no_connect
 		(at 228.6 87.63)
 		(uuid "0c83cc11-e385-4e43-a721-c55fb2e51067")
@@ -2355,7 +2361,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 58.42) (xy 57.15 59.69)
+			(xy 57.15 58.42) (xy 57.15 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2412,6 +2418,16 @@
 			(type default)
 		)
 		(uuid "7a1f643e-fad8-47a4-ac04-b3aa30cc91af")
+	)
+	(wire
+		(pts
+			(xy 49.53 60.96) (xy 49.53 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b18ffb4-8698-4519-9232-6aaebfe02388")
 	)
 	(wire
 		(pts
@@ -2482,6 +2498,16 @@
 			(type default)
 		)
 		(uuid "a5b926cf-a9ba-4b3f-939f-a0da4b0155a9")
+	)
+	(wire
+		(pts
+			(xy 57.15 60.96) (xy 57.15 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4dc2524-c33f-416d-8f2b-fa9eef490e9f")
 	)
 	(wire
 		(pts
@@ -3160,34 +3186,31 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 57.15 63.5 0)
+		(at 53.34 60.96 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0a64b249-454f-483d-a852-3984fbab099a")
 		(property "Reference" "C1"
-			(at 60.96 62.2299 0)
+			(at 49.276 55.372 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 60.96 64.7699 0)
+		(property "Value" "10uF"
+			(at 49.276 57.912 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
-			(at 58.1152 67.31 0)
+			(at 57.15 59.9948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3196,7 +3219,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.15 63.5 0)
+			(at 53.34 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3205,7 +3228,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 57.15 63.5 0)
+			(at 53.34 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3724,7 +3747,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V0"
+		(property "Value" "+3V6"
 			(at 22.352 135.382 0)
 			(effects
 				(font
@@ -3789,7 +3812,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V0"
+		(property "Value" "+3V6"
 			(at 216.662 64.262 0)
 			(effects
 				(font
@@ -3898,6 +3921,71 @@
 			(project ""
 				(path "/9c0e249a-475f-406b-99f3-8e689c92e153"
 					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 49.53 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9c012274-1e93-4162-b89d-c5e096f95d2d")
+		(property "Reference" "#PWR011"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 49.784 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 49.53 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30a8382e-0088-41a2-a2a9-994118d6f097")
+		)
+		(instances
+			(project "BirthdayBuzzer"
+				(path "/9c0e249a-475f-406b-99f3-8e689c92e153"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -4259,7 +4347,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V0"
+		(property "Value" "+3V6"
 			(at 22.352 165.862 0)
 			(effects
 				(font
@@ -4389,7 +4477,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V0"
+		(property "Value" "+3V6"
 			(at 83.312 23.622 0)
 			(effects
 				(font
@@ -4529,7 +4617,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V0"
+		(property "Value" "+3V6"
 			(at 55.372 54.102 0)
 			(effects
 				(font
